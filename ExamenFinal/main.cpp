@@ -18,6 +18,7 @@ void menuUsuarios();
 usuarios usuariosrRegistrado;
 bitacora auditorias;
 reportes reporte;
+catalogos catalogo;
 
 int main()
 {
@@ -53,7 +54,7 @@ void menuGeneral(){
 
         switch (opciones) {
             case 1:
-                //catalogo.menuCatalogos();
+                catalogo.menuCatalogos();
                 break;
             case 2:
                 //reporte.menuInformes();
@@ -70,7 +71,7 @@ void menuGeneral(){
             default:
                 cout << "n\t\tOpción no válida. Intente de nuevo" << endl;
         }
-    } while (opciones != 7); // Repite el menú hasta que el usuario quiera salir
+    } while (opciones != 5); // Repite el menú hasta que el usuario quiera salir
 
 }
 

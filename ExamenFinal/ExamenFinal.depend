@@ -16,17 +16,21 @@
 1748450817 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\usuarios.h
 	<string>
 
-1748449982 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\catalogos.cpp
+1748454382 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\catalogos.cpp
 	"catalogos.h"
+	"bodega.h"
+	"usuarios.h"
+	"bodega.h"
+	<iostream>
 
-1748449982 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\catalogos.h
+1748453700 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\catalogos.h
 
 1748449982 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\reportes.cpp
 	"reportes.h"
 
 1748449982 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\reportes.h
 
-1748450817 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\usuarios.cpp
+1748453187 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\usuarios.cpp
 	"usuarios.h"
 	"bitacora.h"
 	<fstream>
@@ -38,7 +42,7 @@
 	"bitacora.h"
 	<limits>
 
-1748452851 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\main.cpp
+1748453916 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\main.cpp
 	<iostream>
 	<fstream>
 	<cstdlib>
@@ -50,10 +54,10 @@
 	<bodega.h>
 	<usuarios.h>
 
-1748451614 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\bodega.h
+1748453187 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\bodega.h
 	<iostream>
 
-1748452830 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\bodega.cpp
+1748454003 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\bodega.cpp
 	"bitacora.h"
 	"bodega.h"
 	"usuarios.h"

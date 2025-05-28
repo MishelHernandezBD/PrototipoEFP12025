@@ -10,6 +10,11 @@ using namespace std;
 
 extern usuarios usuariosrRegistrado;
 
+bodega::bodega()
+{
+
+}
+
 void bodega::menu()
 {
     int choice;
