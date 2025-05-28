@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -32,6 +33,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/bitacora.h" />
+		<Unit filename="include/bodega.h" />
+		<Unit filename="include/catalogos.h" />
+		<Unit filename="include/reportes.h" />
+		<Unit filename="include/usuarios.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/bitacora.cpp" />
+		<Unit filename="src/bodega.cpp" />
+		<Unit filename="src/catalogos.cpp" />
+		<Unit filename="src/reportes.cpp" />
+		<Unit filename="src/usuarios.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
