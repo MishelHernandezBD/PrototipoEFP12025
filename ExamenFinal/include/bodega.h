@@ -18,6 +18,5 @@ class bodega
 
     private:
         string id,idTipoBodega,nombre,direccion,estado;
-};
 
 #endif // BODEGA_H

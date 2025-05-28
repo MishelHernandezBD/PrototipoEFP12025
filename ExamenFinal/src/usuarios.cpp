@@ -10,8 +10,6 @@
 #include <limits>//para que se lea bien la limpiada del buffer de entrada
 
 using namespace std;
-
-// Aquí lo hice con estructuras, pero solo este. Estructura para almacenamiento binario
 struct UsuarioBin {
     char id[20];
     char name[50];
@@ -27,10 +25,6 @@ usuarios::~usuarios()
 {
     // Destructor
 }
-
-//INICIAN LOS CRUD
-
-//Iniciar sesión de usuarios
 bool usuarios::loginUsuarios() {
     string usuario, contra;
     int intentosIngreso = 0;
@@ -44,7 +38,6 @@ bool usuarios::loginUsuarios() {
 
         cout << "\t\tUsuario: ";
         getline(cin, usuario);
-
         cout << "\n\t\tContraseña: ";
         char caracter;
         caracter = getch();
@@ -109,10 +102,9 @@ bool usuarios::registrarUsuario() {
 
     cout << "\t\tIngrese Nombre: ";
     getline(cin, nuevoNombre);
-
     cout << "\t\tIngrese Contraseña: ";
 
-    //contraseña ocualtado como en el login
+    //contraseña ocualtado como en el logi
     char caracter;
     caracter = getch();
     nuevaContra = "";
@@ -154,8 +146,6 @@ bool usuarios::registrarUsuario() {
 
     file.write(reinterpret_cast<char*>(&usuario), sizeof(UsuarioBin));
     file.close();
-
-    //utilicé el reinterpret_cast del capitulo d c++, para convertir  convertir UsuarioBin en una secuencia de bytes crudos (char*) para poder escribirla en el archivo binario.
 
     cout << "\n\n\t\tUsuario registrado exitosamente!" << endl;
 
@@ -208,7 +198,6 @@ bool usuarios::consultarUsuarios() {
     return true;
 }
 
-//Modificar un usuario por medio del ID (Cambiar nombre y contraseña)
 bool usuarios::modificarUsuario() {
     system("cls");
     fstream file, tempFile;

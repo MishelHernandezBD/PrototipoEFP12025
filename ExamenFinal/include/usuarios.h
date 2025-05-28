@@ -9,12 +9,12 @@ class usuarios
     public:
         usuarios();
         virtual ~usuarios();
+
         bool loginUsuarios();
         bool registrarUsuario();
         bool consultarUsuarios();
         bool modificarUsuario();
         bool eliminarUsuario();
-        bool restaurarBackup();
         bool buscar(string user, string passw);
         string getNombre();
         void setNombre(string nombre);
