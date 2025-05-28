@@ -2,7 +2,11 @@
 #include <fstream>
 #include <cstdlib>
 #include <exception>
-
+#include <usuarios.h>
+#include <bitacora.h>
+#include <reportes.h>
+#include <catalogos.h>
+#include <bodega.h>
 
 using namespace std;
 
