@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1748450817 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<ctime>
+	<iomanip>
+	<cstring>
+	<usuarios.h>
+
+1748450817 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\bitacora.h
+	<iostream>
+
+1748450817 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\usuarios.h
+	<string>
+
+1748449982 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\catalogos.cpp
+	"catalogos.h"
+
+1748449982 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\catalogos.h
+
+1748449982 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\reportes.cpp
+	"reportes.h"
+
+1748449982 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\reportes.h
+
+1748450817 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\usuarios.cpp
+	"usuarios.h"
+	"bitacora.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<sstream>
+	<iostream>
+	<cstring>
+	"bitacora.h"
+	<limits>
+
+1748452851 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<exception>
+	<usuarios.h>
+	<bitacora.h>
+	<reportes.h>
+	<catalogos.h>
+	<bodega.h>
+	<usuarios.h>
+
+1748451614 c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\include\bodega.h
+	<iostream>
+
+1748452830 source:c:\users\mishel\onedrive\documentos\programacion\programacion 1\prototipoefp12025\prototipoefp12025\examenfinal\src\bodega.cpp
+	"bitacora.h"
+	"bodega.h"
+	"usuarios.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<conio.h>
+	<iomanip>
+

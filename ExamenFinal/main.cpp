@@ -7,6 +7,7 @@
 #include <reportes.h>
 #include <catalogos.h>
 #include <bodega.h>
+#include <usuarios.h>
 
 using namespace std;
 
@@ -15,7 +16,6 @@ void menuInicio();
 void menuUsuarios();
 
 usuarios usuariosrRegistrado;
-Catalogos catalogo;
 bitacora auditorias;
 reportes reporte;
 
@@ -53,10 +53,10 @@ void menuGeneral(){
 
         switch (opciones) {
             case 1:
-                catalogo.menuCatalogos();
+                //catalogo.menuCatalogos();
                 break;
             case 2:
-                reporte.menuInformes();
+                //reporte.menuInformes();
                 break;
             case 3:
                 auditorias.menu();
@@ -86,8 +86,7 @@ void menuInicio() {
         cout << "\t\t1. Iniciar Sesion" << endl;
         cout << "\t\t2. Registrarse" << endl; //para que el usuario tenga oportunidad de registrarse si no tiene user
         cout << "\t\t3. Gestion de Usuarios" << endl; //CRUD USUARIOS
-        cout << "\t\t4. Backup y Respaldo" << endl;
-        cout << "\t\t5. Salir" << endl;
+        cout << "\t\t4. Salir" << endl;
         cout << "\t\tSeleccione una opción: ";
         cin >> opcion;
         cin.ignore();
@@ -118,26 +117,13 @@ void menuInicio() {
                 }
                 menuUsuarios(); // ya está autenticado aquí
                 break;
-            case 4: //Se requiere que el usuario inicie sesión antes por seguridad
-                system("cls");
-                if (usuariosrRegistrado.getNombre().empty()) {
-                    cout << "\n\t\tDebe iniciar sesión para acceder a esta función." << endl;
-                    system("pause"); // <-- Pausa para que se lean los mensajes
-                    if (!usuariosrRegistrado.loginUsuarios()) {
-                        cout << "\n\t\tInicio de sesión fallido. No se puede acceder a Backup." << endl;
-                        system("pause"); // <-- Pausa para que se lean los mensajes
-                        break;
-                    }
-                }
-                menuBackup();
-                break;
-            case 5:
+            case 4:
                 return; // Salir del programa
             default:
                 cout << "\n\t\tOpción inválida. Intente de nuevo." << endl;
                 system("pause");
         }
-    } while (opcion != 5);
+    } while (opcion != 4);
 }
 
 void menuUsuarios() {
