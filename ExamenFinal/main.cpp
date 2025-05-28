@@ -46,7 +46,7 @@ void menuGeneral(){
         cout << "\t\t\t1. Menu de Catalogos" << endl;
         cout << "\t\t\t2. Menu de Reportes" << endl;
         cout << "\t\t\t3. Menu de Bitacora" << endl;
-        cout << "\t\t\t4. Seguridad" << endl; //Astrid agregó menú para los archivos
+        cout << "\t\t\t4. Seguridad" << endl; //Astrid agregÃ³ menÃº para los archivos
         cout << "\t\t\t5. Salir" << endl;
         cout << "\n\t\tIngrese una opcion: ";
         cin >> opciones;
@@ -68,9 +68,9 @@ void menuGeneral(){
                 cout << "\n\n\t\tSaliendo del sistema...\n" << endl;
                 break;
             default:
-                cout << "n\t\tOpción no válida. Intente de nuevo" << endl;
+                cout << "n\t\tOpciÃ³n no vÃ¡lida. Intente de nuevo" << endl;
         }
-    } while (opciones != 7); // Repite el menú hasta que el usuario quiera salir
+    } while (opciones != 7); // Repite el menÃº hasta que el usuario quiera salir
 
 }
 
@@ -88,7 +88,7 @@ void menuInicio() {
         cout << "\t\t3. Gestion de Usuarios" << endl; //CRUD USUARIOS
         cout << "\t\t4. Backup y Respaldo" << endl;
         cout << "\t\t5. Salir" << endl;
-        cout << "\t\tSeleccione una opción: ";
+        cout << "\t\tSeleccione una opciÃ³n: ";
         cin >> opcion;
         cin.ignore();
 
@@ -105,26 +105,26 @@ void menuInicio() {
                 system ("cls");
                 usuariosrRegistrado.registrarUsuario();
                  break;
-            case 3: //Se requiere que el usuario inicie sesión antes por seguridad
+            case 3: //Se requiere que el usuario inicie sesiÃ³n antes por seguridad
                 system("cls");
                 if (usuariosrRegistrado.getNombre().empty()) {
-                    cout << "\n\t\tDebe iniciar sesión para acceder a esta función." << endl;
+                    cout << "\n\t\tDebe iniciar sesiÃ³n para acceder a esta funciÃ³n." << endl;
                      system("pause"); // <-- Pausa para que se lean los mensajes
                     if (!usuariosrRegistrado.loginUsuarios()) {
-                        cout << "\n\t\tInicio de sesión fallido. No se puede acceder a Gestión de Usuarios." << endl;
+                        cout << "\n\t\tInicio de sesiÃ³n fallido. No se puede acceder a GestiÃ³n de Usuarios." << endl;
                         system("pause"); // <-- Pausa para que se lean los mensajes
                         break;
                     }
                 }
-                menuUsuarios(); // ya está autenticado aquí
+                menuUsuarios(); // ya estÃ¡ autenticado aquÃ­
                 break;
-            case 4: //Se requiere que el usuario inicie sesión antes por seguridad
+            case 4: //Se requiere que el usuario inicie sesiÃ³n antes por seguridad
                 system("cls");
                 if (usuariosrRegistrado.getNombre().empty()) {
-                    cout << "\n\t\tDebe iniciar sesión para acceder a esta función." << endl;
+                    cout << "\n\t\tDebe iniciar sesiÃ³n para acceder a esta funciÃ³n." << endl;
                     system("pause"); // <-- Pausa para que se lean los mensajes
                     if (!usuariosrRegistrado.loginUsuarios()) {
-                        cout << "\n\t\tInicio de sesión fallido. No se puede acceder a Backup." << endl;
+                        cout << "\n\t\tInicio de sesiÃ³n fallido. No se puede acceder a Backup." << endl;
                         system("pause"); // <-- Pausa para que se lean los mensajes
                         break;
                     }
@@ -134,7 +134,7 @@ void menuInicio() {
             case 5:
                 return; // Salir del programa
             default:
-                cout << "\n\t\tOpción inválida. Intente de nuevo." << endl;
+                cout << "\n\t\tOpciÃ³n invÃ¡lida. Intente de nuevo." << endl;
                 system("pause");
         }
     } while (opcion != 5);
@@ -153,11 +153,11 @@ void menuUsuarios() {
         cout << "\t\t\t-------------------------------------------------------" << endl;
         cout << "\t\t\t 1. Ingreso Usuarios" << endl;
         cout << "\t\t\t 2. Consulta Usuarios" << endl;
-        cout << "\t\t\t 3. Modificación Usuarios" << endl;
-        cout << "\t\t\t 4. Eliminación Usuarios" << endl;
-        cout << "\t\t\t 5. Retornar al menú anterior" << endl;
+        cout << "\t\t\t 3. ModificaciÃ³n Usuarios" << endl;
+        cout << "\t\t\t 4. EliminaciÃ³n Usuarios" << endl;
+        cout << "\t\t\t 5. Retornar al menÃº anterior" << endl;
         cout << "\t\t\t-------------------------------------------------------" << endl;
-        cout << "\t\t\tIngrese una opción: ";
+        cout << "\t\t\tIngrese una opciÃ³n: ";
         cin >> choice;
 
         switch (choice) {
@@ -179,7 +179,7 @@ void menuUsuarios() {
         case 5:
             break;
         default:
-            cout << "n\t\tOpción no válida. Intente de nuevo" << endl;
+            cout << "n\t\tOpciÃ³n no vÃ¡lida. Intente de nuevo" << endl;
         }
 
     } while (choice != 5);

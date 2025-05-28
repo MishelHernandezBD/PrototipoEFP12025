@@ -62,7 +62,7 @@ void bitacora::insertar(string nombre, string aplicacion, string accion){
     char fechaHora[50];
     strftime(fechaHora, sizeof(fechaHora), "%Y-%m-%d %H:%M:%S", ltm);
 
-    // Convertimos strings a arrays de char con tamaño fijo
+    // Convertimos strings a arrays de char con tamaï¿½o fijo
     char nombreArr[50], aplicacionArr[50], accionArr[50];
     strcpy(nombreArr, nombre.c_str());
     strcpy(aplicacionArr, aplicacion.c_str());

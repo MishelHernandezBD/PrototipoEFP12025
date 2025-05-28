@@ -3,7 +3,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <conio.h>
-#include <sstream>  // Agregado para procesar cada línea
+#include <sstream>  // Agregado para procesar cada lï¿½nea
 #include <iostream>
 #include <cstring>
 #include "bitacora.h"
@@ -11,7 +11,7 @@
 
 using namespace std;
 
-// Aquí lo hice con estructuras, pero solo este. Estructura para almacenamiento binario
+// Aquï¿½ lo hice con estructuras, pero solo este. Estructura para almacenamiento binario
 struct UsuarioBin {
     char id[20];
     char name[50];
@@ -23,14 +23,9 @@ usuarios::usuarios()
     // Constructor
 }
 
-usuarios::~usuarios()
-{
-    // Destructor
-}
-
 //INICIAN LOS CRUD
 
-//Iniciar sesión de usuarios
+//Iniciar sesiï¿½n de usuarios
 bool usuarios::loginUsuarios() {
     string usuario, contra;
     int intentosIngreso = 0;
@@ -45,7 +40,7 @@ bool usuarios::loginUsuarios() {
         cout << "\t\tUsuario: ";
         getline(cin, usuario);
 
-        cout << "\n\t\tContraseña: ";
+        cout << "\n\t\tContraseï¿½a: ";
         char caracter;
         caracter = getch();
         contra = "";
@@ -68,7 +63,7 @@ bool usuarios::loginUsuarios() {
             ingresa = true;
         }
         else {
-            cout << "\n\t\tEl Usuario y/o contraseña son incorrectos" << endl;
+            cout << "\n\t\tEl Usuario y/o contraseï¿½a son incorrectos" << endl;
             bitacora auditoria;
             auditoria.insertar("usuario", "100", "LOGF"); //Login fallido
             cin.get();
@@ -78,7 +73,7 @@ bool usuarios::loginUsuarios() {
     } while (ingresa == false && intentosIngreso < 3);
 
     if (ingresa == false) {
-        cout << "\t\t\nIngreso denegado...\n\t\tUsuario y/o contraseña invalidos. Intentos agotados" << endl;
+        cout << "\t\t\nIngreso denegado...\n\t\tUsuario y/o contraseï¿½a invalidos. Intentos agotados" << endl;
         bitacora auditoria;
         auditoria.insertar("usuario", "100", "LOGF");
         cin.get();
@@ -110,9 +105,9 @@ bool usuarios::registrarUsuario() {
     cout << "\t\tIngrese Nombre: ";
     getline(cin, nuevoNombre);
 
-    cout << "\t\tIngrese Contraseña: ";
+    cout << "\t\tIngrese Contraseï¿½a: ";
 
-    //contraseña ocualtado como en el login
+    //contraseï¿½a ocualtado como en el login
     char caracter;
     caracter = getch();
     nuevaContra = "";
@@ -142,20 +137,20 @@ bool usuarios::registrarUsuario() {
         }
     }
 
-    // copia un número limitado de caracteres de una cadena a otra, protegiendo contra desbordamientos de buffer.
+    // copia un nï¿½mero limitado de caracteres de una cadena a otra, protegiendo contra desbordamientos de buffer.
     // copiar de forma segura los datos del usuario a la estructura de almacenamiento
     UsuarioBin usuario;
     strncpy(usuario.id, nuevoId.c_str(), sizeof(usuario.id) - 1);
-    strncpy(usuario.name, nuevoNombre.c_str(), sizeof(usuario.name) - 1); //Copia hasta un carácter menos que el tamaño del buffer
+    strncpy(usuario.name, nuevoNombre.c_str(), sizeof(usuario.name) - 1); //Copia hasta un carï¿½cter menos que el tamaï¿½o del buffer
     strncpy(usuario.pass, nuevaContra.c_str(), sizeof(usuario.pass) - 1);
     usuario.id[sizeof(usuario.id) - 1] = '\0';
-    usuario.name[sizeof(usuario.name) - 1] = '\0'; // Asegura manualmente que el último carácter sea NULL
+    usuario.name[sizeof(usuario.name) - 1] = '\0'; // Asegura manualmente que el ï¿½ltimo carï¿½cter sea NULL
     usuario.pass[sizeof(usuario.pass) - 1] = '\0';
 
     file.write(reinterpret_cast<char*>(&usuario), sizeof(UsuarioBin));
     file.close();
 
-    //utilicé el reinterpret_cast del capitulo d c++, para convertir  convertir UsuarioBin en una secuencia de bytes crudos (char*) para poder escribirla en el archivo binario.
+    //utilicï¿½ el reinterpret_cast del capitulo d c++, para convertir  convertir UsuarioBin en una secuencia de bytes crudos (char*) para poder escribirla en el archivo binario.
 
     cout << "\n\n\t\tUsuario registrado exitosamente!" << endl;
 
@@ -180,7 +175,7 @@ bool usuarios::consultarUsuarios() {
 
     file.open("Usuarios.bin", ios::in | ios::binary);
     if (!file) {
-        cout << "\n\t\tNo hay información disponible de usuarios..." << endl;
+        cout << "\n\t\tNo hay informaciï¿½n disponible de usuarios..." << endl;
         system("pause");
         return false;
     }
@@ -189,7 +184,7 @@ bool usuarios::consultarUsuarios() {
         total++;
         cout << "\n\t\tID: " << usuario.id << endl;
         cout << "\t\tNombre: " << usuario.name << endl;
-        cout << "\t\tContraseña: " << usuario.pass << endl;
+        cout << "\t\tContraseï¿½a: " << usuario.pass << endl;
     }
     system("pause");
 
@@ -208,7 +203,7 @@ bool usuarios::consultarUsuarios() {
     return true;
 }
 
-//Modificar un usuario por medio del ID (Cambiar nombre y contraseña)
+//Modificar un usuario por medio del ID (Cambiar nombre y contraseï¿½a)
 bool usuarios::modificarUsuario() {
     system("cls");
     fstream file, tempFile;
@@ -217,7 +212,7 @@ bool usuarios::modificarUsuario() {
     bool found = false;
 
     cout << "\n\t\t-------------------------" << endl;
-    cout << "\t\t MODIFICACIÓN DE USUARIO " << endl;
+    cout << "\t\t MODIFICACIï¿½N DE USUARIO " << endl;
     cout << "\t\t-------------------------" << endl << endl;
 
     cout << "\t\tIngrese ID del usuario a modificar: ";
@@ -226,7 +221,7 @@ bool usuarios::modificarUsuario() {
 
     file.open("Usuarios.bin", ios::in | ios::binary);
     if (!file) {
-        cout << "\n\t\tNo hay información disponible..." << endl;
+        cout << "\n\t\tNo hay informaciï¿½n disponible..." << endl;
         return false;
     }
     system("cls");
@@ -238,19 +233,19 @@ bool usuarios::modificarUsuario() {
     while (file.read(reinterpret_cast<char*>(&usuario), sizeof(UsuarioBin))) {
         if (searchId == string(usuario.id)) {
             found = true;
-            //muestra los datos actuales para qu el usuario sepa q está modificando
+            //muestra los datos actuales para qu el usuario sepa q estï¿½ modificando
             cout << "\n\t\tDatos actuales:" << endl;
             cout << "\t\tID: " << usuario.id << endl;
             cout << "\t\tNombre: " << usuario.name << endl;
-            cout << "\t\tContraseña: " << usuario.pass << endl << endl;
+            cout << "\t\tContraseï¿½a: " << usuario.pass << endl << endl;
 
             //solicita los nuevos datos
             string newName, newPass;
             cout << "\t\tNuevo nombre: ";
             getline(cin, newName);
 
-            cout << "\t\tNueva contraseña: ";
-            //el mismo coso para la contraseña
+            cout << "\t\tNueva contraseï¿½a: ";
+            //el mismo coso para la contraseï¿½a
             char caracter;
             newPass = "";
             caracter = getch();
@@ -288,7 +283,7 @@ bool usuarios::modificarUsuario() {
     }
     else {
         remove("Temp.bin");
-        cout << "\n\t\tNo se encontró el usuario con ID: " << searchId << endl;
+        cout << "\n\t\tNo se encontrï¿½ el usuario con ID: " << searchId << endl;
         return false;
     }
     system("cls");
@@ -303,7 +298,7 @@ bool usuarios::eliminarUsuario() {
     bool found = false;
 
     cout << "\n\t\t-------------------------" << endl;
-    cout << "\t\t ELIMINACIÓN DE USUARIO  " << endl;
+    cout << "\t\t ELIMINACIï¿½N DE USUARIO  " << endl;
     cout << "\t\t-------------------------" << endl << endl;
 
     cout << "\t\tIngrese ID del usuario a eliminar: ";
@@ -312,7 +307,7 @@ bool usuarios::eliminarUsuario() {
 
     file.open("Usuarios.bin", ios::in | ios::binary);
     if (!file) {
-        cout << "\n\t\tNo hay información disponible..." << endl;
+        cout << "\n\t\tNo hay informaciï¿½n disponible..." << endl;
         return false;
     }
     system("cls");
@@ -325,10 +320,10 @@ bool usuarios::eliminarUsuario() {
             cout << "\n\t\tDatos del usuario a eliminar:" << endl;
             cout << "\t\tID: " << usuario.id << endl;
             cout << "\t\tNombre: " << usuario.name << endl;
-            cout << "\t\tContraseña: " << usuario.pass << endl << endl;
+            cout << "\t\tContraseï¿½a: " << usuario.pass << endl << endl;
 
             char confirmar;
-            cout << "\t\t¿Está seguro de eliminar este usuario? (S/N): ";
+            cout << "\t\tï¿½Estï¿½ seguro de eliminar este usuario? (S/N): ";
             cin >> confirmar;
             cin.ignore();
 
@@ -340,7 +335,7 @@ bool usuarios::eliminarUsuario() {
             }
             else {
                 tempFile.write(reinterpret_cast<char*>(&usuario), sizeof(UsuarioBin));
-                cout << "\n\t\tOperación cancelada." << endl;
+                cout << "\n\t\tOperaciï¿½n cancelada." << endl;
             }
         }
         else {
@@ -358,7 +353,7 @@ bool usuarios::eliminarUsuario() {
     }
     else {
         remove("Temp.bin");
-        cout << "\n\t\tNo se encontró el usuario con ID: " << searchId << endl;
+        cout << "\n\t\tNo se encontrï¿½ el usuario con ID: " << searchId << endl;
         return false;
     }
 }
