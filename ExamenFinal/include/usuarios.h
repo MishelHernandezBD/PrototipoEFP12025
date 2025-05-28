@@ -8,6 +8,8 @@ class usuarios
 {
     public:
         usuarios();
+        virtual ~usuarios();
+
         bool loginUsuarios();
         bool registrarUsuario();
         bool consultarUsuarios();

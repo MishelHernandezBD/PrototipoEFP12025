@@ -23,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -44,7 +45,6 @@
 		<Unit filename="src/catalogos.cpp" />
 		<Unit filename="src/reportes.cpp" />
 		<Unit filename="src/usuarios.cpp" />
-		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

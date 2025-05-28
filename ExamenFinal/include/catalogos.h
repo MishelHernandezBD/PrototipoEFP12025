@@ -6,10 +6,7 @@ class catalogos
 {
     public:
         catalogos();
-        virtual ~catalogos();
-
-    protected:
-
+        void menuCatalogos();
     private:
 };
 
